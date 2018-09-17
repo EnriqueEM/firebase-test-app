@@ -1,0 +1,150 @@
+
+
+/*MOSAICO DE NOVEDADES*/
+.mosaic-full-novedades {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 5px;
+}
+
+.mosaic-full-novedades-background {
+    margin: 0;
+}
+
+.mosaic-full-novedades-1 {
+    grid-column: 1 / span 1;
+    grid-row: 1 /span 3;
+    position: relative;
+}
+
+
+.mosaic-full-novedades-img-1 {
+    height: auto;
+    width: 100%;
+}
+
+.mosaic-full-novedades-2 {
+    grid-column: 1 / span 1;
+    grid-row: 4 /span 1;
+    position: relative;
+}
+
+.mosaic-full-novedades-img-2 {
+    height: auto;
+    width: 100%;
+}
+
+.mosaic-full-novedades-3 {
+    grid-column: 2 / span 1;
+    grid-row: 1 /span 1;
+    position: relative;
+}
+
+.mosaic-full-novedades-img-3 {
+    height: auto;
+    width: 100%;
+}
+
+.mosaic-full-novedades-4 {
+    grid-column: 2 / span 1;
+    grid-row: 2 /span 1;
+    position: relative;
+}
+
+.mosaic-full-novedades-img-4 {
+    height: auto;
+    width: 100%;
+}
+
+.mosaic-full-novedades-5 {
+    grid-column: 3 / span 1;
+    grid-row: 1 /span 2;
+    position: relative;
+}
+
+.mosaic-full-novedades-img-5 {
+    height: auto;
+    width: 100%;
+}
+
+.mosaic-full-novedades-6 {
+    grid-column: 4 / span 1;
+    grid-row: 1 /span 2;
+    position: relative;
+}
+
+    .mosaic-full-novedades-6 iframe {
+        height: 100%;
+        width: 100%;
+    }
+
+.mosaic-full-novedades-7 {
+    grid-column: 3 / span 2;
+    grid-row: 3 /span 1;
+    position: relative;
+}
+
+.mosaic-full-novedades-img-7 {
+    height: auto;
+    width: 100%;
+}
+
+.mosaic-full-novedades-8 {
+    grid-column: 2 / span 1;
+    grid-row: 3 /span 1;
+    position: relative;
+}
+
+.mosaic-full-novedades-img-8 {
+    height: auto;
+    width: 100%;
+}
+
+.mosaic-full-novedades-9 {
+    grid-column: 2 / span 3;
+    grid-row: 4 /span 1;
+    position: relative;
+}
+
+.mosaic-full-novedades-img-9 {
+    height: auto;
+    width: 100%;
+}
+
+
+/*NOVEDADES DEGRADADO INFERIOR*/
+.mosaic-full-novedades-bottom-gradient {
+    position: absolute;
+    top: auto;
+    bottom: 80px;
+    height: 5em;
+    width: 100%;
+    background: rgba(0, 0, 0, 0) linear-gradient(0deg, rgb(17, 23, 53) 0%, rgb(17, 23, 53) 50%, rgba(255, 255, 255, 0) 100%) repeat scroll 0% 0%;
+    transition: transform 0.35s ease 0s;
+    transform: translate3d(0px, 100%, 0px);
+    color: #FFF;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.mosaic-full-novedades-bottom-icon {
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+    font-size: 20px;
+}
+
+.mosaic-full-novedades-bottom-title {
+    position: absolute;
+    bottom: 38px;
+    left: 40px;
+    font-size: 18px;
+}
+
+.mosaic-full-novedades-bottom-subtitle {
+    position: absolute;
+    bottom: 10px;
+    left: 40px;
+    width: 200px;
+    font-size: 12px;
+}

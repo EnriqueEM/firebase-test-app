@@ -6,31 +6,13 @@
               </a>          
       </div>
       <div class="org-header-single__menu-bar__links">
-          <ul class="list-complete" id="list-complete" data-mode="list-complete__list-hrt">             
-                  <li class="list-complete-item">
-                      <a href="/Nosotros">Centros Comerciales</a>
-                  </li>
-                  <li class="list-complete-item">
-                      <a href="/NuestrasTiendas">Tiendas</a>
-                  </li>
-                  <li class="list-complete-item">
-                      <a href="/Eventos">Eventos</a>
-                  </li>
-                  <li class="list-complete-item">
-                      <a href="/Promociones">Promociones</a>
-                  </li>
-                  <li class="list-complete-item">
-                      <a href="/GaleriasClub">Galerías Club</a>
-                  </li>
-                  <li class="list-complete-item">
-                      <a  href="/GaleriasMagazine" onclick="">Galerías Magazine</a>
-                  </li>
-                  <li class="list-complete-item">
-                      <a href="/GaleriasTV">Galerías TV</a>
-                  </li>
-                  <li class="list-complete-item">
-                      <i class="material-icons fas fa-search" id="btn-search"></i>
-                  </li>
+          <ul class="list-complete" id="list-complete" data-mode="list-complete__list-hrt">                             
+            <li class="list-complete-item" *ngFor = "let menuI of menu | keyvalue">
+                <a href="{{ menuI.value.url }}" id="{{ menuI.value.id }}">{{ menuI.value.text }}</a>
+            </li>
+            <li class="list-complete-item">
+                <i class="material-icons fas fa-search" id="btn-search"></i>
+            </li>
           </ul>
       </div>
       <div class="org-header-single__menu-bar__login-button">

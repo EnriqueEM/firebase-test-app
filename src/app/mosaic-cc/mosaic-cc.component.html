@@ -1,32 +1,53 @@
-<article>    
-  <ul class="list-buttonText" id="list-buttonText">
-      <li class="list-buttonText-item">
-          <button class="atom-round-button" data-mode="atom-round-button__border">Todas las tiendas</button>
-      </li>
-      <li class="list-buttonText-item">
-          <button class="atom-round-button" data-mode="atom-round-button__border">CDMX / Area Metropolitana</button>
-      </li>
-      <li class="list-buttonText-item">
-          <button class="atom-round-button" data-mode="atom-round-button__border">Norte</button>
-      </li>
-      <li class="list-buttonText-item">
-          <button class="atom-round-button" data-mode="atom-round-button__border">Pacífico</button>
-      </li>
-      <li class="list-buttonText-item">
-          <button class="atom-round-button" data-mode="atom-round-button__border">Centro</button>
-      </li>
-      <li class="list-buttonText-item">
-          <button class="atom-round-button" data-mode="atom-round-button__border">Sur</button>
-      </li>
-      <li class="list-buttonText-item">
-          <button class="atom-round-button" data-mode="atom-round-button__border">Sureste</button>
-      </li>
-  </ul>
+<article>
+<ul class="list-buttonText" id="list-buttonText">
+    <li *ngFor= "let region of regiones | keyvalue">
+            <button class="atom-round-button" data-mode="atom-round-button__border" id ="{{ region.value.id }}"> {{ region.value.text }}</button>
+    </li>
+</ul>
 
   <hr class="list-buttonText-under-hr">
 
   <ul class="flex-container">
+        <li class="flex-item" *ngFor="let cardCC of cardsCC | keyvalue">
+                <div class="card-mall" id="card-mall">
+                    <figure class="card-mall-media"><img src="{{cardCC.value.fachada}}"></figure>
+                    <div class="card-mall__brief">
+                        <div class="card-mall__brief--Title">
+                            <h3> {{ cardCC.value.nombre }} </h3>
+                        </div>
+                        <div class="card-mall__brief--reveal"><span class="fas fa-ellipsis-v revealModalCard modalTo-1"></span></div>
+                        <div class="card-mall__brief--anchor"><a href="{{ cardCC.value.url }}">Ir a este centro comercial</a></div>
+                    </div>
+                    <div class="card-mall__modal modal_hidden" id="modalTo-1">
+                        <div class="card-mall__modal--close"><span class="material-icons closeModalCard modalTo-1">close</span></div>
+                        <div class="card-mall__modal--logo">
+                            <figure><img src="{{ cardCC.value.logo }}"></figure>
+                        </div>
+                        <div class="card-mall__modal--direction">
+                            <p>{{ cardCC.value.direccion }}</p>
+                        </div>
+                        <div class="card-mall__modal--thelepone">
+                            <p>{{ cardCC.value.telefono }}</p>
+                        </div>
+                        <div class="card-mall__modal--email">
+                            <p>{{ cardCC.value.correo }} </p>
+                        </div>
+                        <div class="card-mall__modal--detail">
+                            <h4>Detalles del Centro comercial</h4>
+                            <ul class="card-mall__modal--detail_item">
+                                <li>{{ cardCC.value.superficie }}</li>
+                                <li>{{ cardCC.value.locales }}</li>
+                                <li>{{ cardCC.value.cajonesEst }}</li>
+                                <li>{{ cardCC.value.tiendasAncla }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
 
+
+
+<!--
       <li class="flex-item cdemx">
 
           <div class="card-mall" id="card-mall">
@@ -1330,6 +1351,6 @@
                   </div>
               </div>
           </div>
-      </li>
+      </li> -->
   </ul>
 </article>
